@@ -7,9 +7,11 @@ describe('<App />', () => {
     cy.title().should('include', 'Cypress React App');
   });
 
-  it('should have navigation', () => {
-    cy.get('[data-testid=About-Link]').should('contain', 'About');
-    cy.get('[data-testid=Home-Link]').should('contain', 'Home');
-    cy.get('[data-testid=Login-Link]').should('contain', 'Login');
+  context('<Nav />', () => {
+    it('should have navigation', () => {
+      cy.get('[data-testid=About-Link]').should('contain', 'About');
+      cy.get('[data-testid=Home-Link]').should('contain', 'Home');
+      cy.get('[data-testid=Login-Link]').should('contain', 'Login');
+    });
   });
 });
